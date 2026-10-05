@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuokraamatkailuauto Kuusamo | Allergiavapaa & Sähkömaastopyörät</title>
+    <meta name="description" content="Vuokraa Kuusamosta 100% allergiavapaa ja tilava Hobby Siesta matkailuauto. B-kortti riittää, tilaa 6:lle. Soita ja varaa: 050 464 1906.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#2C5530',
+                        sand: '#F4F1EA',
+                        accent: '#D97736'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Hakukoneoptimointi (Schema Markup) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRental",
+      "name": "Matkailuauto Kuusamo - Pellit Auki",
+      "description": "100% allergiavapaa matkailuauto vuokrattavana Kuusamossa. Tilaa 6 henkilölle, B-kortti riittää. Sähkömaastopyörät lisäpalveluna.",
+      "image": "20210827_214636.jpg",
+      "telephone": "0504641906",
+      "priceRange": "790€ - 1280€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kuusamo",
+        "addressCountry": "FI"
+      },
+      "vehicle": {
+        "@type": "Vehicle",
+        "name": "Hobby Siesta A70 GM",
+        "vehicleCapacity": "6"
+      }
+    }
+    </script>
+</head>
+<body class="bg-sand text-gray-800 font-sans antialiased">
+
+    <!-- Navigointi -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="Matkailuauto Kuusamo Logo" class="h-16 w-auto object-contain" onerror="this.outerHTML='<span class=\'text-2xl font-bold text-forest tracking-tight\'>MATKAILUAUTO KUUSAMO</span>'">
+            </div>
+            <!-- Soittonappi yläpalkissa -->
+            <a href="tel:0504641906" class="bg-forest hover:bg-green-800 text-white font-semibold py-2 px-6 rounded-full transition duration-300 flex items-center gap-2">
+                📞 050 464 1906
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero-osio -->
+    <!-- Taustakuvana auringonlaskukuva -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/.netlify/images?url=/20210827_214636.jpg&w=1920&q=80');">
+        <div class="max-w-5xl mx-auto px-4 text-center text-white relative z-10">
+            <span class="bg-accent text-white px-4 py-1 rounded-full text-sm font-bold tracking-wider uppercase mb-4 inline-block">B-kortti riittää (6 hlö)</span>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Täydellinen loma-auto Kuusamosta:<br>
+                <span class="text-green-300">Allergiavapaa</span> & Sähköpyörät!
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-gray-200">
+                Vuokraa tilava ja huolellisesti siivottu Hobby Siesta -matkailuauto, jossa ei ole koskaan kuljetettu lemmikkejä. Lisäpalveluna huippuluokan sähkömaastopyörät matkaan!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:0504641906" class="bg-forest hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+                    Soita ja varaa: 050 464 1906
+                </a>
+                <a href="#kuvat" class="bg-white hover:bg-gray-100 text-forest font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+                    Katso kuvat
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Myyntivaltit -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+            <div class="text-center p-6 rounded-2xl bg-sand">
+                <div class="text-4xl mb-4">🍃</div>
+                <h3 class="text-xl font-bold text-forest mb-2">100 % Allergiavapaa</h3>
+                <p class="text-gray-600">Autossa ei ole koskaan kuljetettu lemmikkejä. Takaamme raikkaan ja puhtaan sisäilman herkimmillekin matkaajille.</p>
+            </div>
+            <div class="text-center p-6 rounded-2xl bg-sand">
+                <div class="text-4xl mb-4">👨‍👩‍👧‍👦</div>
+                <h3 class="text-xl font-bold text-forest mb-2">Tilaa 6 henkilölle</h3>
+                <p class="text-gray-600">Rekisteröity kuudelle, helppo ajaa normaalilla B-kortilla. Kaksi tilavaa parivuodetta ja täysin varusteltu keittiö.</p>
+            </div>
+            <div class="text-center p-6 rounded-2xl bg-sand">
+                <div class="text-4xl mb-4">🏔️</div>
+                <h3 class="text-xl font-bold text-forest mb-2">Täydellinen sijainti</h3>
+                <p class="text-gray-600">Hae auto Kuusamosta ja suuntaa suoraan Lapin erämaihin, Norjan vuonoille tai Oulangan kansallispuistoon.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sähköpyörät & Varustelu -->
+    <section class="py-16 bg-sand" id="varustelu">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-forest mb-6">Sähkömaastopyörät kätevästi mukaan reissuun (45 € / vrk)</h2>
+                <p class="text-gray-700 mb-6 text-lg">
+                    Mikä olisikaan parempi tapa tutustua Kuusamon ja Rukan reitteihin kuin laadukas sähkömaastopyörä? 
+                    Auton takaosan telineessä (max 60 kg) pyörät kulkevat kätevästi mukana minne tahansa.
+                </p>
+                
+                <h3 class="text-xl font-bold text-forest mb-4 mt-8">Kuin liikkuva koti – kaikki tämä löytyy:</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-center">✅ <span class="ml-2">Täysin varusteltu keittiö ja jääkaappi</span></li>
+                    <li class="flex items-center">✅ <span class="ml-2">Oma suihku ja kemiallinen WC</span></li>
+                    <li class="flex items-center">✅ <span class="ml-2">Tilava takatalli tavaroille</span></li>
+                    <li class="flex items-center">✅ <span class="ml-2">Retkipöytä ja -tuolit markiisin alle</span></li>
+                    <li class="flex items-center">✅ <span class="ml-2">Tehokas Truma-ilmakiertolämmitys (sähkö/kaasu)</span></li>
+                    <li class="flex items-center">✅ <span class="ml-2">Peräti 2000 km / vko sisältyy hintaan!</span></li>
+                </ul>
+            </div>
+            <div>
+                <!-- Kuva auton takaosasta ja pyöristä -->
+                <img src="/.netlify/images?url=/20260724_110630.jpg&w=900&q=80" alt="Matkailuauto ja sähköpyörät telineessä" loading="lazy" decoding="async" class="rounded-2xl shadow-xl w-full object-cover h-[450px]">
+            </div>
+        </div>
+    </section>
+
+    <!-- Kuvagalleria -->
+    <section class="py-16 bg-white" id="kuvat">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-forest mb-10 text-center">Kuvia autosta ja tunnelmia</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Sisä- ja ulkokuvat -->
+                <img src="/.netlify/images?url=/20230813_092939.jpg&w=700&h=450&fit=cover&q=80" alt="Keittiö ja istuinryhmä" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
+                <img src="/.netlify/images?url=/20230813_092850.jpg&w=700&h=450&fit=cover&q=80" alt="Leveä parivuode" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
+                <img src="/.netlify/images?url=/20230813_093430.jpg&w=700&h=450&fit=cover&q=80" alt="Kylpyhuone ja suihku" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
+                <img src="/.netlify/images?url=/20210904_162216.jpg&w=700&h=450&fit=cover&q=80" alt="Matkailuauto reissun päällä" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
+                
+                <!-- Fiiliskuvat -->
+                <img src="/.netlify/images?url=/20220312_211248.jpg&w=700&h=450&fit=cover&q=80" alt="Matkailuauto talviyössä" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
+                <img src="/.netlify/images?url=/20210626_204532.jpg&w=700&h=450&fit=cover&q=80" alt="Nuotiotunnelmaa järven rannalla" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
+                <img src="/.netlify/images?url=/20240922_200745.jpg&w=1200&h=600&fit=cover&q=80" alt="Syystunnelmaa ja revontulet Kuusamossa" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition sm:col-span-2 lg:col-span-3 lg:h-80">
+            </div>
+        </div>
+    </section>
+
+    <!-- Hinnasto -->
+    <section class="py-16 bg-forest text-white" id="hinnasto">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-10">Hinnasto 2026-2027</h2>
+            <div class="grid sm:grid-cols-2 gap-6 text-left">
+                <div class="bg-green-900 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-4 border-b border-green-700 pb-2">Kesä ja Syksy</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between"><span>1.5. – 31.5.</span> <span class="font-bold">850 € / vko</span></li>
+                        <li class="flex justify-between text-green-300 font-bold"><span>1.6. – 15.8. (Sesonki)</span> <span>1280 € / vko</span></li>
+                        <li class="flex justify-between"><span>16.8. – 30.9.</span> <span class="font-bold">890 € / vko</span></li>
+                    </ul>
+                </div>
+                <div class="bg-green-900 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-4 border-b border-green-700 pb-2">Muut ajat & Lisäpalvelut</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between"><span>Talvi / Kevät</span> <span class="font-bold">790 € / vko</span></li>
+                        <li class="flex justify-between text-sm text-gray-300"><span>(tai 142 € / vrk, min. 3 vrk)</span></li>
+                        <li class="flex justify-between mt-4"><span>Sähköpyörä</span> <span class="font-bold">45 € / vrk</span></li>
+                        <li class="flex justify-between"><span>Loppusiivous & Tyhjennykset</span> <span class="font-bold">Kysy hinta!</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yhteystiedot / Soita ja varaa (Lomakkeen tilalla) -->
+    <section class="py-20 bg-sand" id="yhteystiedot">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-forest mb-6">Oletko valmis reissuun?</h2>
+            <p class="text-gray-700 text-lg mb-10">
+                Tarkista vapaat viikot ja tee varaus helposti soittamalla tai laittamalla viestiä. Vastaamme mielellämme kaikkiin kysymyksiin!
+            </p>
+            <div class="bg-white p-10 rounded-2xl shadow-md border-t-4 border-accent">
+                <p class="text-gray-500 uppercase tracking-widest text-sm mb-2">Varaukset ja tiedustelut</p>
+                <a href="tel:0504641906" class="text-4xl md:text-5xl font-bold text-forest hover:text-green-700 transition block mb-6">
+                    050 464 1906
+                </a>
+                <p class="text-gray-600">pellitauki@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="flex justify-center mb-6">
+                <img src="logo.png" alt="Matkailuauto Kuusamo" class="h-16 opacity-90" onerror="this.outerHTML='<span class=\'text-2xl font-bold text-white tracking-tight\'>MATKAILUAUTO KUUSAMO</span>'">
+            </div>
+            <p class="text-gray-400 mb-2">Pellit Auki! - 100 % Allergiavapaa matkailuauto Kuusamosta.</p>
+            <p class="text-gray-400">Puh: 050 464 1906 | pellitauki@gmail.com</p>
+            <p class="text-gray-500 text-sm mt-8">&copy; 2024 Matkailuauto Kuusamo. Kaikki oikeudet pidätetään.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
