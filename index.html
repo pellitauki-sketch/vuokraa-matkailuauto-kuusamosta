@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuokraamatkailuauto Kuusamo | Allergiavapaa & Sähkömaastopyörät</title>
     <meta name="description" content="Vuokraa Kuusamosta 100% allergiavapaa ja tilava Hobby Siesta matkailuauto. B-kortti riittää, tilaa 6:lle. Soita ja varaa: 050 464 1906.">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        forest: '#2C5530',
-                        sand: '#F4F1EA',
-                        accent: '#D97736'
-                    }
-                }
-            }
+
+    <!-- Preconnect for external font providers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload Hero LCP image -->
+    <link rel="preload" as="image" href="/.netlify/images?url=/20210827_214636.jpg&w=1200&fm=avif&q=80" imagesrcset="/.netlify/images?url=/20210827_214636.jpg&w=400&fm=avif&q=80 400w, /.netlify/images?url=/20210827_214636.jpg&w=800&fm=avif&q=80 800w, /.netlify/images?url=/20210827_214636.jpg&w=1200&fm=avif&q=80 1200w" imagesizes="100vw" fetchpriority="high">
+
+    <!-- Font display swap -->
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: swap;
+            src: local('Inter'), local('sans-serif');
         }
-    </script>
+    </style>
 
     <!-- Hakukoneoptimointi (Schema Markup) -->
     <script type="application/ld+json">
@@ -29,7 +31,7 @@
       "@type": "AutoRental",
       "name": "Matkailuauto Kuusamo - Pellit Auki",
       "description": "100% allergiavapaa matkailuauto vuokrattavana Kuusamossa. Tilaa 6 henkilölle, B-kortti riittää. Sähkömaastopyörät lisäpalveluna.",
-      "image": "20210827_214636.jpg",
+      "image": "/.netlify/images?url=/20210827_214636.jpg&w=1200&fm=avif&q=80",
       "telephone": "0504641906",
       "priceRange": "790€ - 1280€",
       "address": {
@@ -51,7 +53,16 @@
     <nav class="bg-white shadow-md fixed w-full z-50 top-0">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="logo.png" alt="Matkailuauto Kuusamo Logo" class="h-16 w-auto object-contain" onerror="this.outerHTML='<span class=\'text-2xl font-bold text-forest tracking-tight\'>MATKAILUAUTO KUUSAMO</span>'">
+                <img src="/.netlify/images?url=/logo.png&w=400&fm=avif&q=80"
+                     srcset="/.netlify/images?url=/logo.png&w=400&fm=avif&q=80 400w,
+                             /.netlify/images?url=/logo.png&w=800&fm=avif&q=80 800w,
+                             /.netlify/images?url=/logo.png&w=1200&fm=avif&q=80 1200w"
+                     sizes="64px"
+                     alt="Matkailuauto Kuusamo Logo"
+                     width="256"
+                     height="256"
+                     class="h-16 w-auto object-contain"
+                     onerror="this.outerHTML='<span class=\'text-2xl font-bold text-forest tracking-tight\'>MATKAILUAUTO KUUSAMO</span>'">
             </div>
             <!-- Soittonappi yläpalkissa -->
             <a href="tel:0504641906" class="bg-forest hover:bg-green-800 text-white font-semibold py-2 px-6 rounded-full transition duration-300 flex items-center gap-2">
@@ -61,8 +72,19 @@
     </nav>
 
     <!-- Hero-osio -->
-    <!-- Taustakuvana auringonlaskukuva -->
-    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/.netlify/images?url=/20210827_214636.jpg&w=1920&q=80');">
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-forest">
+        <!-- Taustakuvana auringonlaskukuva Netlify Image CDNillä ja LCP-priorisoinnilla -->
+        <img src="/.netlify/images?url=/20210827_214636.jpg&w=1200&fm=avif&q=80"
+             srcset="/.netlify/images?url=/20210827_214636.jpg&w=400&fm=avif&q=80 400w,
+                     /.netlify/images?url=/20210827_214636.jpg&w=800&fm=avif&q=80 800w,
+                     /.netlify/images?url=/20210827_214636.jpg&w=1200&fm=avif&q=80 1200w"
+             sizes="100vw"
+             alt="Matkailuauto Kuusamo auringonlaskussa"
+             width="1600"
+             height="1200"
+             fetchpriority="high"
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/60"></div>
         <div class="max-w-5xl mx-auto px-4 text-center text-white relative z-10">
             <span class="bg-accent text-white px-4 py-1 rounded-full text-sm font-bold tracking-wider uppercase mb-4 inline-block">B-kortti riittää (6 hlö)</span>
             <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -126,7 +148,17 @@
             </div>
             <div>
                 <!-- Kuva auton takaosasta ja pyöristä -->
-                <img src="/.netlify/images?url=/20260724_110630.jpg&w=900&q=80" alt="Matkailuauto ja sähköpyörät telineessä" loading="lazy" decoding="async" class="rounded-2xl shadow-xl w-full object-cover h-[450px]">
+                <img src="/.netlify/images?url=/20260724_110630.jpg&w=800&fm=avif&q=80"
+                     srcset="/.netlify/images?url=/20260724_110630.jpg&w=400&fm=avif&q=80 400w,
+                             /.netlify/images?url=/20260724_110630.jpg&w=800&fm=avif&q=80 800w,
+                             /.netlify/images?url=/20260724_110630.jpg&w=1200&fm=avif&q=80 1200w"
+                     sizes="(max-width: 768px) 100vw, 50vw"
+                     alt="Matkailuauto ja sähköpyörät telineessä"
+                     width="1200"
+                     height="560"
+                     loading="lazy"
+                     decoding="async"
+                     class="rounded-2xl shadow-xl w-full object-cover h-[450px]">
             </div>
         </div>
     </section>
@@ -137,15 +169,85 @@
             <h2 class="text-3xl font-bold text-forest mb-10 text-center">Kuvia autosta ja tunnelmia</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Sisä- ja ulkokuvat -->
-                <img src="/.netlify/images?url=/20230813_092939.jpg&w=700&h=450&fit=cover&q=80" alt="Keittiö ja istuinryhmä" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
-                <img src="/.netlify/images?url=/20230813_092850.jpg&w=700&h=450&fit=cover&q=80" alt="Leveä parivuode" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
-                <img src="/.netlify/images?url=/20230813_093430.jpg&w=700&h=450&fit=cover&q=80" alt="Kylpyhuone ja suihku" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
-                <img src="/.netlify/images?url=/20210904_162216.jpg&w=700&h=450&fit=cover&q=80" alt="Matkailuauto reissun päällä" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
+                <img src="/.netlify/images?url=/20230813_092939.jpg&w=800&fm=avif&q=80"
+                     srcset="/.netlify/images?url=/20230813_092939.jpg&w=400&fm=avif&q=80 400w,
+                             /.netlify/images?url=/20230813_092939.jpg&w=800&fm=avif&q=80 800w,
+                             /.netlify/images?url=/20230813_092939.jpg&w=1200&fm=avif&q=80 1200w"
+                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                     alt="Keittiö ja istuinryhmä"
+                     width="1200"
+                     height="900"
+                     loading="lazy"
+                     decoding="async"
+                     class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
+                <img src="/.netlify/images?url=/20230813_092850.jpg&w=800&fm=avif&q=80"
+                     srcset="/.netlify/images?url=/20230813_092850.jpg&w=400&fm=avif&q=80 400w,
+                             /.netlify/images?url=/20230813_092850.jpg&w=800&fm=avif&q=80 800w,
+                             /.netlify/images?url=/20230813_092850.jpg&w=1200&fm=avif&q=80 1200w"
+                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                     alt="Leveä parivuode"
+                     width="1200"
+                     height="900"
+                     loading="lazy"
+                     decoding="async"
+                     class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
+                <img src="/.netlify/images?url=/20230813_093430.jpg&w=800&fm=avif&q=80"
+                     srcset="/.netlify/images?url=/20230813_093430.jpg&w=400&fm=avif&q=80 400w,
+                             /.netlify/images?url=/20230813_093430.jpg&w=800&fm=avif&q=80 800w,
+                             /.netlify/images?url=/20230813_093430.jpg&w=1200&fm=avif&q=80 1200w"
+                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                     alt="Kylpyhuone ja suihku"
+                     width="1200"
+                     height="900"
+                     loading="lazy"
+                     decoding="async"
+                     class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
+                <img src="/.netlify/images?url=/20210904_162216.jpg&w=800&fm=avif&q=80"
+                     srcset="/.netlify/images?url=/20210904_162216.jpg&w=400&fm=avif&q=80 400w,
+                             /.netlify/images?url=/20210904_162216.jpg&w=800&fm=avif&q=80 800w,
+                             /.netlify/images?url=/20210904_162216.jpg&w=1200&fm=avif&q=80 1200w"
+                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                     alt="Matkailuauto reissun päällä"
+                     width="1200"
+                     height="900"
+                     loading="lazy"
+                     decoding="async"
+                     class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
                 
                 <!-- Fiiliskuvat -->
-                <img src="/.netlify/images?url=/20220312_211248.jpg&w=700&h=450&fit=cover&q=80" alt="Matkailuauto talviyössä" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
-                <img src="/.netlify/images?url=/20210626_204532.jpg&w=700&h=450&fit=cover&q=80" alt="Nuotiotunnelmaa järven rannalla" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
-                <img src="/.netlify/images?url=/20240922_200745.jpg&w=1200&h=600&fit=cover&q=80" alt="Syystunnelmaa ja revontulet Kuusamossa" loading="lazy" decoding="async" class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition sm:col-span-2 lg:col-span-3 lg:h-80">
+                <img src="/.netlify/images?url=/20220312_211248.jpg&w=800&fm=avif&q=80"
+                     srcset="/.netlify/images?url=/20220312_211248.jpg&w=400&fm=avif&q=80 400w,
+                             /.netlify/images?url=/20220312_211248.jpg&w=800&fm=avif&q=80 800w,
+                             /.netlify/images?url=/20220312_211248.jpg&w=1200&fm=avif&q=80 1200w"
+                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                     alt="Matkailuauto talviyössä"
+                     width="1200"
+                     height="900"
+                     loading="lazy"
+                     decoding="async"
+                     class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
+                <img src="/.netlify/images?url=/20210626_204532.jpg&w=800&fm=avif&q=80"
+                     srcset="/.netlify/images?url=/20210626_204532.jpg&w=400&fm=avif&q=80 400w,
+                             /.netlify/images?url=/20210626_204532.jpg&w=800&fm=avif&q=80 800w,
+                             /.netlify/images?url=/20210626_204532.jpg&w=1200&fm=avif&q=80 1200w"
+                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                     alt="Nuotiotunnelmaa järven rannalla"
+                     width="1200"
+                     height="900"
+                     loading="lazy"
+                     decoding="async"
+                     class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition">
+                <img src="/.netlify/images?url=/20240922_200745.jpg&w=1200&fm=avif&q=80"
+                     srcset="/.netlify/images?url=/20240922_200745.jpg&w=400&fm=avif&q=80 400w,
+                             /.netlify/images?url=/20240922_200745.jpg&w=800&fm=avif&q=80 800w,
+                             /.netlify/images?url=/20240922_200745.jpg&w=1200&fm=avif&q=80 1200w"
+                     sizes="(max-width: 1024px) 100vw, 1200px"
+                     alt="Syystunnelmaa ja revontulet Kuusamossa"
+                     width="1400"
+                     height="1050"
+                     loading="lazy"
+                     decoding="async"
+                     class="rounded-xl w-full h-64 object-cover shadow-md hover:opacity-90 transition sm:col-span-2 lg:col-span-3 lg:h-80">
             </div>
         </div>
     </section>
@@ -197,7 +299,18 @@
     <footer class="bg-gray-900 text-white py-10">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <div class="flex justify-center mb-6">
-                <img src="logo.png" alt="Matkailuauto Kuusamo" class="h-16 opacity-90" onerror="this.outerHTML='<span class=\'text-2xl font-bold text-white tracking-tight\'>MATKAILUAUTO KUUSAMO</span>'">
+                <img src="/.netlify/images?url=/logo.png&w=400&fm=avif&q=80"
+                     srcset="/.netlify/images?url=/logo.png&w=400&fm=avif&q=80 400w,
+                             /.netlify/images?url=/logo.png&w=800&fm=avif&q=80 800w,
+                             /.netlify/images?url=/logo.png&w=1200&fm=avif&q=80 1200w"
+                     sizes="64px"
+                     alt="Matkailuauto Kuusamo"
+                     width="256"
+                     height="256"
+                     loading="lazy"
+                     decoding="async"
+                     class="h-16 w-auto opacity-90 object-contain"
+                     onerror="this.outerHTML='<span class=\'text-2xl font-bold text-white tracking-tight\'>MATKAILUAUTO KUUSAMO</span>'">
             </div>
             <p class="text-gray-400 mb-2">Pellit Auki! - 100 % Allergiavapaa matkailuauto Kuusamosta.</p>
             <p class="text-gray-400">Puh: 050 464 1906 | pellitauki@gmail.com</p>
@@ -205,5 +318,20 @@
         </div>
     </footer>
 
+    <!-- Third-party Scripts: deferred to the end of body -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#2C5530',
+                        sand: '#F4F1EA',
+                        accent: '#D97736'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
 </body>
 </html>
