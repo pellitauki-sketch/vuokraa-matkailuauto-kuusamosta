@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vuokraa-matkailuauto-kuusamosta.netlify.app/sitemap.xml
