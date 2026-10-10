@@ -201,9 +201,23 @@
             </div>
             <p class="text-gray-400 mb-2">Pellit Auki! - 100 % Allergiavapaa matkailuauto Kuusamosta.</p>
             <p class="text-gray-400">Puh: 050 464 1906 | pellitauki@gmail.com</p>
-            <p class="text-gray-500 text-sm mt-8">&copy; 2024 Matkailuauto Kuusamo. Kaikki oikeudet pidätetään.</p>
+            <p class="text-gray-500 text-sm mt-4">Sivustolla vierailijoita: <span id="visitor-count">...</span></p>
+            <p class="text-gray-500 text-sm mt-4">&copy; 2024 Matkailuauto Kuusamo. Kaikki oikeudet pidätetään.</p>
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('/api/visitor-counter', { method: 'POST' });
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('visitor-count').textContent = data.visitors;
+                }
+            } catch (e) {
+                console.error('Failed to fetch visitor count', e);
+            }
+        });
+    </script>
 </body>
 </html>
