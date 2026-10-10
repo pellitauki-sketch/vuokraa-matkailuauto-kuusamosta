@@ -1,0 +1,53 @@
+{
+  "version": "8",
+  "dialect": "postgres",
+  "id": "06a0edf5-a8cb-4ee0-a8cf-aa7850163de7",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "ddl": [
+    {
+      "isRlsEnabled": false,
+      "name": "site_stats",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "site_stats"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "0",
+      "generated": null,
+      "identity": null,
+      "name": "visitors",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "site_stats"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "site_stats_pkey",
+      "schema": "public",
+      "table": "site_stats",
+      "entityType": "pks"
+    }
+  ],
+  "renames": []
+}
