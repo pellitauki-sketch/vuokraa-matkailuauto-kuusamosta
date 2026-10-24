@@ -186,8 +186,10 @@
         <div class="max-w-5xl mx-auto px-4 text-center">
             <h2 id="instagram-otsikko" class="text-3xl font-bold text-forest mb-4">Seuraa Pellit Auki! -matkailuauton matkoja Instagramissa</h2>
             <p class="text-gray-700 text-lg max-w-2xl mx-auto mb-7">Katso kuvia ja tunnelmia matkailuautosta, reissuilta ja Kuusamon maisemista Instagram-profiilistamme.</p>
-            <div id="instagram-feed" class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 mb-8" aria-live="polite" hidden></div>
-            <p id="instagram-feed-status" class="text-gray-600 text-sm mb-5" hidden>Instagram-julkaisuja ei voitu ladata. Voit katsoa kuvat suoraan Instagramissa.</p>
+            <!-- Elfsight Instagram Feed | Pellit Auki! -->
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-fce730ca-0342-4e6c-acd8-d768c9c8fc84" data-elfsight-app-lazy></div>
+            <div class="mb-8"></div>
             <a href="https://www.instagram.com/pellit_auki/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-forest hover:bg-green-800 text-white font-bold py-3 px-8 rounded-full transition" aria-label="Avaa Pellit Auki! Instagramissa (avautuu uuteen välilehteen)">Katso Instagram: @pellit_auki ↗</a>
         </div>
     </section>
@@ -251,41 +253,7 @@
         </div>
     </section>
 
-    <script>
-        // Display latest public media returned by the Netlify server-side Instagram endpoint.
-        (async () => {
-            const grid = document.getElementById('instagram-feed');
-            const status = document.getElementById('instagram-feed-status');
-            if (!grid || !status) return;
-            try {
-                const response = await fetch('/.netlify/functions/instagram-feed');
-                if (!response.ok) throw new Error('Feed not available');
-                const data = await response.json();
-                if (!Array.isArray(data.posts) || !data.posts.length) throw new Error('No posts');
-                for (const post of data.posts) {
-                    if (!/^https:\/\//.test(post.image) || !/^https:\/\/www\.instagram\.com\//.test(post.url)) continue;
-                    const link = document.createElement('a');
-                    link.href = post.url;
-                    link.target = '_blank';
-                    link.rel = 'noopener noreferrer';
-                    link.className = 'block rounded-xl overflow-hidden shadow-md aspect-square bg-white';
-                    link.setAttribute('aria-label', 'Avaa Instagram-julkaisu uudessa välilehdessä');
-                    const img = document.createElement('img');
-                    img.src = post.image;
-                    img.alt = 'Pellit Auki! - Instagram-julkaisu';
-                    img.loading = 'lazy';
-                    img.decoding = 'async';
-                    img.className = 'w-full h-full object-cover hover:opacity-90 transition';
-                    link.appendChild(img);
-                    grid.appendChild(link);
-                }
-                if (!grid.childElementCount) throw new Error('No usable posts');
-                grid.hidden = false;
-            } catch (error) {
-                status.hidden = false;
-            }
-        })();
-    </script>
+
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-10">
