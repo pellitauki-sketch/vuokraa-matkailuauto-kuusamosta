@@ -1,6 +1,6 @@
 // Netlify Function: read recent posts from the owner's Instagram professional account.
 // Configure INSTAGRAM_ACCESS_TOKEN in Netlify environment variables (never in client code).
-exports.handler = async () => {
+export const handler = async () => {
   const headers = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=300, s-maxage=1800' };
   const token = process.env.INSTAGRAM_ACCESS_TOKEN;
   if (!token) return { statusCode: 503, headers: { ...headers, 'Cache-Control': 'no-store' }, body: JSON.stringify({ error: 'Instagram integration is not configured' }) };
